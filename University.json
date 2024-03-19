@@ -1,0 +1,56 @@
+{
+  "Aeyw1thko4mxVKaLE25K": {
+    "university_id": "Aeyw1thko4mxVKaLE25K",
+    "name_ar": "جامعة الملك سعود",
+    "name_en": "King Saud University",
+    "region_ar": "",
+    "region_en": "",
+    "semester_type": "two_semesters",
+    "img": "https://storage.googleapis.com/rokam-app-5819b.appspot.com/KSU_logo.png?Expires=4854590460&GoogleAccessId=firebase-adminsdk-v7bjg%40rokam-app-5819b.iam.gserviceaccount.com&Signature=KmtCmqv3h%2BiuaOPnWoKZ9EYyngF0s%2BaJoDMpaYigrX%2BpxjYijhIbOT7hg8LBT8ZytNqgT8vSeAg%2F3rHf6UalRhnntnwp9Kolw0M2rYouSt9xFqURquorTDj1RjITRC%2FeiHjcPafPuBjXfvfm3x706o0G3TWPWFQPmxAQsfs2VBUh%2Fs%2Bl%2FngBv%2B9fXRFuC6MOWhn%2F04YFsiknyMjJQxPbU1FwO2%2BFyz%2FVZGCnkKzQVItAPCgRRRT3S8BhB9KaPS%2BkwHMkyhR3j8%2BmLeIWd43UQOIGewWE5TYfHOKPr%2BPWjStS%2FjLJtJgkKM9SHDFS%2F12%2FKySkogt1rka%2BHslxFvIBwQ%3D%3D",
+    "programs": {
+      "tAPVIuzvAgWQUvLi": {
+        "program_id": "tAPVIuzvAgWQUvLi",
+        "name_ar": "EEMZ-الهندسة الكهربائية التطبيقية",
+        "name_en": "New English Name"
+      },
+      "pnuFfeqcfeitvgee": {
+        "program_id": "pnuFfeqcfeitvgee",
+        "name_ar": "IMNN-المالية",
+        "name_en": ""
+      },
+      "bDVoL8kPKOltHPyJ": {
+        "program_id": "bDVoL8kPKOltHPyJ",
+        "name_ar": "IMN1-مسار المالية العام",
+        "name_en": "name here"
+      }
+    }
+  },
+  "0032dea7-39a3-4716-b11b-8d662b0833b8": {
+    "7498x4bN525ACTgVqihC": {
+      "university_id": "7498x4bN525ACTgVqihC",
+      "name_ar": "جامعة الملك خالد",
+      "name_en": "King Khalid University",
+      "region_ar": "عسير",
+      "region_en": "Asir",
+      "semester_type": "two_semesters",
+      "img": "https://storage.googleapis.com/rokam-app-5819b.appspot.com/KKU_logo.png?Expires=4855130434&GoogleAccessId=firebase-adminsdk-v7bjg%40rokam-app-5819b.iam.gserviceaccount.com&Signature=A0ORWs36DJ58EdGlCc2qywsCbLdC9baGQmTlxtfCxXmi5PItjVUm4zeYsaiB%2FkLbNIq2XW%2BA%2F4gOhk5qn2pEGfZySAWO4YvC8kaqEzLWdJL9hELxpxPmJzc2eSJ80usykOnOSnPL3BDwZfSXj5SjdVztoCJH5ISwcBlREheReB%2FECAuUFwiZeJbNRotYn0A2PaNJkovJhuLLdk1FJohFf6N5YiUbSScpimwcjDgqam%2FDw1KmdwdnLJ4QLWK%2B8m%2F%2Fj5U%2BSjNvfPqw4jRndbOpqeXB%2FpBzbEqtR5G%2FQoKL4Oz7tBkfVKcDzOB4y3j0A%2FqXmV09tnLNBSnjgCYJz%2B42bQ%3D%3D",
+      "programs": {
+        "A6y9WoHHrhDNqT4Q": {
+          "program_id": "A6y9WoHHrhDNqT4Q",
+          "name_ar": "الهندسة الكهربائية",
+          "name_en": ""
+        },
+        "oo3xUiBHmsB6F8x0": {
+          "program_id": "oo3xUiBHmsB6F8x0",
+          "name_ar": "الهندسة الصناعية",
+          "name_en": ""
+        },
+        "4K3JFOd8j5s0yQLC": {
+          "program_id": "4K3JFOd8j5s0yQLC",
+          "name_ar": "العمارة",
+          "name_en": ""
+        }
+      }
+    }
+  }
+}
