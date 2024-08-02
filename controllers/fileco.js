@@ -1,69 +1,65 @@
-const { request } = require('express');
-const uuid = require('uuid');
-const {readFile, writeFile} = require('../utils/fileutils.js');
+const University = require('../models/model.js');
 
-const gitAll = (req, res) => {
+const gitAll = async (req, res) => {
     try{
-        res.status(200).json({uni:readFile()})
+        const universities = await University.findOne();
+        res.status(200).json({universities})
     }catch(e){
-        res.status(500).json({ error: e })
+        res.status(500).json({ error: e.message });
     }
 };
 
 //read by id
 
-const gitUniById =(req, res) => {
+const gitUniById = async (req, res) => {
     try{
         const id = req.params.id
-        const university = readFile()[id]
+        const university = await University.findById(id);
         if(!university) return res.status(404).json({'message':`University id ${id} not found`});
-        res.status(200).json({uni:university})
+        res.status(200).json({universities})
     }catch(e){
-        res.status(500).json({ error: e })
+        res.status(500).json({ error: e.message });
     }
-}
+};
 
-const createUni =(req, res) => {
-    const data = req.body
-    let university = readFile()
-    const id = uuid.v4()
-    if (university[id]) {
-        return res.json({'message':`University id ${id} is already exists`});
+const createUni = async (req, res) => {
+    try{
+        const data = req.body
+        const university = new University(data)
+        await University.create(university);
+        res.status(201).json({university})
+    }catch (e) {
+        res.status(500).json({ error: e.message});
     }
-    data['university_id'] = id
-    university[id] = data
-    writeFile(university)
-    res.status(201).json({'university':university[id]})
-}
+
+};
 
 //update
 
-const updateuni =
-(req, res) => {
-    const data = req.body
-    const universityId = req.params.id
-    let university = readFile()
-    if (!university[universityId]) return res.status(404).json({'message':'not found'});
-    data['university_id'] = universityId
-    university[universityId] = data
-    writeFile(university)
-    res.status(200).json({'university':university[universityId]})
-}
-
-const deletUni = (req, res) => {
-    try {
-        const universityId = req.params.id;
-        let universities = readFile();
-        if (!universities[universityId]) {
-            return res.status(404).json({'message': `University id ${universityId} not found`});
-        }
-        delete universities[universityId];
-        writeFile(universities);
-        res.status(200).json({'message': `University id ${universityId} has been deleted`});
-    } catch (e) {
-        res.status(500).json({ error: e })
+const updateuni = async (req, res) => {
+    try{
+        const id = req.params.id;
+        const data = req.body;
+        const university = await University.findByIdAndUpdate(id, data, {new: true});
+        if (!University) return res.status(404).json({ 'massage' : ' not found'});
+        res.status(200).json({university});
+    }catch (e){
+        res.status(500).json({error: e.massage});
     }
-}
+
+};
+    
+
+const deletUni = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const university = await University.findByIdAndDelete(id);
+        if (!university) return res.status(404).json({'message': 'not found'});
+        res.status(204).json({'message': `University id  has been deleted`});
+    } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+};
 
 
 module.exports = {
